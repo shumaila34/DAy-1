@@ -1,0 +1,118 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Poppins:wght@400;700&family=Protest+Strike&display=swap" rel="stylesheet">;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  .hero {
+    width: 100%;
+    height: 100vh;
+    /* background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3)); */
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .content h1 {
+    font-size: 14em;
+    color:black;
+    font-weight: 600;
+    transition: 0.5s;
+    text-shadow: 0 0 10px beige,
+    0  0 20px black,
+    0  0  4cap black,
+    0  0  80px white,
+    0  0  120px  black;
+  }
+  
+  .content h1:hover {
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+  }
+  
+  .content a {
+    width:30%;
+    text-decoration: none;
+    display: inline-block;
+    color:black;
+    font-size: 74px;
+    border: 4px solid black;
+    padding: 40px 80px;
+    margin-top: 30px;
+    transition: 0.5s;
+  }
+  
+  .content a:hover {
+    /* background: black; */
+    color: #000;
+  }
+  
+  .back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  @media (min-aspect-ratio: 16/9) {
+    .back-video {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-aspect-ratio: 16/9) {
+    .back-video {
+      width: auto;
+      height: 100%;
+    }
+  }
+  @keyframes animatecontenth1{
+    0%, 5%
+    {
+        transform:scaleY(0) translateX(0);
+
+    }
+    10%{
+        transform: scaleY(1) translate(0);
+    }90%{
+        transform: scaleY(1) translateX(calc(600px -10px))
+    }95%,100%{
+        transform: scaleY(0)translateX(calc(600px-10px));
+    }
+
+}
+.content h1 {
+    font-size: 14em;
+    color: black;
+    font-weight: 600;
+    transition: 0.5s;
+    text-shadow: 0 0 10px beige, 0 0 20px black, 0 0 4px black, 0 0 80px white, 0 0 120px black;
+    animation: animatecontenth1 4s linear infinite; /* Apply the animation here */
+}
+
+@keyframes animatecontenth1 {
+    0%, 5% {
+        transform: scaleY(0) translateX(0);
+    }
+    10% {
+        transform: scaleY(1) translate(0);
+    }
+    90% {
+        transform: scaleY(1) translateX(calc(600px - 10px));
+    }
+    95%, 100% {
+        transform: scaleY(0)translateX(calc(600px - 10px));
+    }
+}
